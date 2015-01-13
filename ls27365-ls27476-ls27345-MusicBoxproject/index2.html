@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Reproductor musica</title>
+        <link rel="stylesheet" href="css/layout2.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Jura:600' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+                    <!-- SCRIPTS -->
+        <script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+        <script type="text/javascript" src="swfobject/swfobject.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js" > </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="js/code.js"></script>
+        <pre id="response"></pre>
+        <header id="topbox">
+        	<img id="logo" src="images/logo.png" alt="logoaqui">
+            <div class="col-xs-8" id="busqueda" >
+                <div class="input-group">
+                    <input id="areabusqueda" type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" aria-label="Left Align" onclick="botonBuscar()">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+    	</header>
+        <div class="bs-example" id="midbox">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active"><a data-toggle="tab" href="#sectionA" onclick="botonMusica()">Musica</a></li>
+                <li><a data-toggle="tab" href="#sectionB" onclick="botonRecomendado()">Recomendada</a></li>
+                <li><a data-toggle="tab" href="#sectionC" onclick="botonBusqueda()">Busqueda</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="sectionA" class="tab-pane fade in active"> <!-- LISTA DE CANÇONS -->
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <a href="#" class="thumbnail">
+                                <img src="http://www.tempsrecord.cat/sites/default/files/styles/uc_product_big/public/img_01_andreamotis.jpg" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-9">
+                            <p> Summertime</p>
+                            <p>Andrea Motis</p>
+                        </div>
+                    </div>
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <a href="#" class="thumbnail">
+                                <img src="images/no-image-icon-md.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-9">
+                            <p> El libro de la selva</p>
+                            <p>Disney</p>
+                        </div>
+                    </div>
+                    <div class="row container">
+                        <div class="col-xs-3">
+                            <a href="#" class="thumbnail">
+                                <img src="images/no-image-icon-md.png" alt="...">
+                            </a>
+                        </div>
+                        <div class="col-xs-9">
+                            <p> El rei león</p>
+                            <p>Disney</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="sectionB" class="tab-pane fade">    <!-- PRIMERA FILA DE CANÇONS RECOMENDADES -->
+                    <div class="col-xs-4 col-md-4">
+                        <a href="#" class="thumbnail">
+                            <img src="images/no-image-icon-md.png" alt="...">
+                        </a>
+                    </div>
+                </div>
+                <div id="sectionC" class="tab-pane fade">    <!-- PRIMERA FILA DE CANÇONS RECOMENDADES -->
+  
+                </div>
+            </div>
+        </div>   
+        <div id="boxplayer">
+            <div id="ytapiplayer">
+                    You need Flash player 8+ and JavaScript enabled to view this video.
+            </div>
+            <section id="player">
+                <div class="row container">    <!-- PRIMERA FILA DE CANÇONS RECOMENDADES -->
+                    <div class="col-xs-3 col-md-3">
+                         <img id="fotoalbum" src="http://www.tempsrecord.cat/sites/default/files/styles/uc_product_big/public/img_01_andreamotis.jpg" alt="Caratula Àlbum"> </img>
+                    </div>
+                    <div class="col-xs-9">
+                        <h3 id="title" >SummerTime</h2>
+                        <h5 id="artist">Andrea Motis</h4>
+                        <div id="buttonbar">
+                            <button id="previousSong" onclick="previousSong()" class="btn btn-default btn-xs">
+                                    <span  id="pvsongspan" class="glyphicon glyphicon-step-backward"></span>
+                            </button>
+                            <button id="play" onclick="vidplay()" class="btn btn-default btn-xs">
+                                    <span  id="playspan" class="glyphicon glyphicon-play"></span>
+                            </button>
+                           
+                            <button id="nextSong" onclick="nextSong()" class="btn btn-default btn-xs">
+                                    <span  id="nxtsongspan" class="glyphicon glyphicon-step-forward"></span>
+                            </button>
+                            <button id= "volumedown" onclick="decreasevolume()" class="btn btn-default btn-xs" >
+                                <span  id="voldownspan" class="glyphicon glyphicon-volume-down"></span>
+                            </button>  
+                         
+                            <button id= "volumeup" onclick="increasevolume()"  class="btn btn-default btn-xs">
+                                <span  id="volupspan" class="glyphicon glyphicon-volume-up"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+         </section>
+    </div>
+ 
+         
+    </body>
+</html>
